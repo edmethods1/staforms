@@ -1,0 +1,6 @@
+
+<mat-form-field class="full-width">
+  <input required [pattern]="validation" type="date" [placeholder]="config.text" matInput  (input)='validate()' #input/>
+  <!--<input [(ngModel)]="textualQuestion.answer" required [pattern]="textualQuestion.validation" matInput #input="ngModel"
+  (keyup)='verifyDisabled()' />-->
+</mat-form-field>

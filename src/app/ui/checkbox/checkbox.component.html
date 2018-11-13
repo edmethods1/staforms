@@ -1,0 +1,8 @@
+<!--<div class="checkbox" [class.selected]="value">
+  <b (click)="toggle()"></b>
+  <span (click)="toggle()">{{config.text}}</span>
+</div>-->
+<div style="padding: .4em">
+  <img *ngIf="config.image" [src]="config.image">
+  <mat-checkbox [checked]="value" (change)="onUpdate($event.checked)">{{config.text}}</mat-checkbox>
+</div>

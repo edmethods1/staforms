@@ -1,0 +1,77 @@
+<div>
+  <table style="margin: auto;">
+    <th colspan="2" style="background: gray;text-align:center">
+      <h3>Person info </h3>
+    </th>
+    <tr>
+      <td>
+        Hard Hat Number:
+      </td>
+      <td>{{data[0]?.hardhatnumber}}</td>
+    </tr>
+    <tr>
+      <td>
+        Name:
+      </td>
+      <td> {{data[0]?.firstname}} {{data[0]?.lastname}}</td>
+    </tr>
+    <tr>
+      <td>Trade: </td>
+      <td> {{data[0]?.trade}}</td>
+    </tr>
+    <tr>
+      <td>Phone: </td>
+      <td> {{data[0]?.phone}}</td>
+    </tr>
+    <tr>
+      <td>Role: </td>
+      <td> {{data[0]?.role}}</td>
+    </tr>
+    <tr>
+      <td>Position: </td>
+      <td> {{data[0]?.position}}</td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <br>
+        <br>
+        <hr>
+      </td>
+    </tr>
+    <th colspan="2" style="background: gray;text-align:center">
+      <h3>Company info </h3>
+    </th>
+
+    <tr>
+      <td>Name: </td>
+      <td> {{data[0]?.companyfk[0]?.Name}}</td>
+    </tr>
+    <tr>
+      <td>Address: </td>
+      <td> {{data[0]?.companyfk[0]?.Address}}</td>
+    </tr>
+    <tr>
+      <td>Contract Number: </td>
+      <td> {{data[0]?.companyfk[0]?.ContractNumber}}</td>
+    </tr>
+    <tr>
+      <td>Emergency Primary Contact Name: </td>
+      <td> {{data[0]?.companyfk[0]?.EmergencyPrimaryContactName}}</td>
+    </tr>
+    <tr>
+      <td>Emergency Primary Contact Number: </td>
+      <td> {{data[0]?.companyfk[0]?.EmergencyPrimaryContactNumber}}</td>
+    </tr>
+    <tr>
+      <td>Prime Emergency Contact Name: </td>
+      <td> {{data[0]?.companyfk[0]?.PrimeEmergencyContactName}}</td>
+    </tr>
+    <tr>
+      <td>Prime Emergency Contact Number: </td>
+      <td> {{data[0]?.companyfk[0]?.PrimeEmergencyContactNumber}}</td>
+    </tr>
+
+  </table>
+</div>
+<br>
+<br>

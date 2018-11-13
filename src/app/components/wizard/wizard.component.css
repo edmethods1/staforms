@@ -1,0 +1,23 @@
+.mat-card {
+  margin-top: 10%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+mat-card {
+  margin: 2em;
+  cursor: pointer;
+  padding: 5em;
+
+}

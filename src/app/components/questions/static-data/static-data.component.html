@@ -1,0 +1,11 @@
+
+<app-static-template [data]="data"></app-static-template>
+<mat-divider></mat-divider>
+<br>
+<div class="center-text">
+  <button color="warn" class="center-text" (click)="submit()" mat-raised-button>Ok</button>
+  <button color="primary" class="right-button" (click)="submit()" mat-raised-button
+  [disabled]="disabled">></button>
+<button color="warn" class="left-button" (click)="back()" mat-raised-button 
+  [disabled]="!staticQuestion.previousQuestionId"><</button>
+</div>

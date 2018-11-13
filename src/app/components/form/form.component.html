@@ -1,0 +1,57 @@
+<mat-card *ngFor="let d of data">
+  <div *ngIf="currentQuestion?.notes" class="center-text">
+    <mat-card-subtitle>
+      <div [innerHTML]="currentQuestion.notes"></div>
+    </mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <br>
+    <br>
+  </div>
+  <mat-card-title *ngIf="currentQuestion && currentQuestion?.type !== QuestionType.Static" class="center-text">
+    {{currentQuestion.questionTextReplaced ? currentQuestion.questionTextReplaced : currentQuestion.questionText }}
+  </mat-card-title>
+
+  <app-textual-question *ngIf="currentQuestion?.type === QuestionType.Textual" [(disabled)]="disabled" [(question)]="currentQuestion"
+    [(updateQuestion)]="updateQuestion" [(form)]="form">
+  </app-textual-question>
+
+  <app-autocomplete-question *ngIf="currentQuestion?.type === QuestionType.Autocomplete" [(disabled)]="disabled" [(question)]="currentQuestion"
+    [(updateQuestion)]="updateQuestion" [(form)]="form">
+  </app-autocomplete-question>
+
+  <app-static-data *ngIf="currentQuestion?.type === QuestionType.Static" [(question)]="currentQuestion"
+    [(updateQuestion)]="updateQuestion" [(form)]="form"></app-static-data>
+
+    <app-radiobutton-question *ngIf="currentQuestion?.type === QuestionType.Radiobutton" [(disabled)]="disabled" [(question)]="currentQuestion"
+    [(updateQuestion)]="updateQuestion" [(form)]="form">
+  </app-radiobutton-question>
+
+  <app-checkbox-question *ngIf="currentQuestion?.type === QuestionType.Checkbox" [(disabled)]="disabled" [(question)]="currentQuestion"
+  [(updateQuestion)]="updateQuestion" [(form)]="form">
+</app-checkbox-question>
+
+<app-buttons-question *ngIf="currentQuestion?.type === QuestionType.Buttons" [(disabled)]="disabled" [(question)]="currentQuestion"
+[(updateQuestion)]="updateQuestion" [(form)]="form">
+</app-buttons-question>
+
+<app-form-question *ngIf="currentQuestion?.type === QuestionType.Form" [(disabled)]="disabled" [(question)]="currentQuestion"
+[(updateQuestion)]="updateQuestion" [(form)]="form">
+</app-form-question>
+
+<div *ngIf="!currentQuestion" class="center-text">
+  <h1 >{{form.finalMessage}}</h1>
+</div>
+
+</mat-card> <button color="warn" class="right-button" (click)="resetForm()" mat-raised-button>Reset
+</button>
+<!-- <mat-form-field class="question-navigator">
+  <mat-select placeholder="Select Question" (selectionChange)='navigateTo(selectedQuestion)' [(ngModel)]="selectedQuestion">
+    <mat-option *ngFor="let question of form.questions" [value]="question">
+      {{question.questionText}}
+    </mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+<pre style="color:white">
+  {{currentQuestion | json}}
+</pre>

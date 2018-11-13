@@ -1,0 +1,8 @@
+<mat-form-field>
+  <input type="text" aria-label="Number" matInput (input)='validate()' [matAutocomplete]="auto" #input>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelect($event)">
+    <mat-option *ngFor="let option of options" [value]="option.value">
+      {{option.name}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

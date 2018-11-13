@@ -1,0 +1,100 @@
+img {
+  max-height: 180px;
+  max-width: 180px;
+}
+
+.mat-card {
+  box-shadow: 0px 1px 3px 4px rgba(0, 0, 0, 0.23) !important;
+  background: none;
+  margin-top: 10%;
+}
+
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+mat-card {
+  max-width: 70%;
+  margin: 2em auto;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
+
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+}
+
+.content-center {
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.error-message {
+  font-size: smaller;
+  color: #ff5722;
+  margin-top: -10px;
+}
+
+.right-button {
+  position: absolute;
+  right: 2em;
+  bottom: 1em;
+  font-size: xx-large;
+  font-family: monospace;
+  min-width: 60px;
+}
+
+.question-navigator {
+  position: absolute;
+  right: 12em;
+  bottom: 1em;
+  width: 20em;
+}
+
+.add-button {
+  position: absolute;
+  right: 5em;
+  bottom: 1em;
+  font-size: xx-large;
+  font-family: monospace;
+  min-width: 60px;
+}
+
+.remove-button {
+  position: absolute;
+  right: 8em;
+  bottom: 1em;
+  font-size: xx-large;
+  font-family: monospace;
+  min-width: 60px;
+  background-color: #ec1f1f;
+}
+
+.left-button {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  font-size: xx-large;
+  font-family: monospace;
+  min-width: 60px;
+}

@@ -1,0 +1,155 @@
+h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 45px;
+    line-height: 45px;
+    font-family: 'Swiss721BT BoldCondensed',sans-serif;
+    display: block;
+    color: #fff;
+}
+  
+.login {
+    padding: 0 20px;
+}
+
+.login .connect {
+    text-align: center;
+    padding: 0 10px;
+}
+  
+  
+  
+.login p {
+    color: #9A9A9A;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 460px;
+    text-align: center;
+}
+  
+.login input {
+    outline: 0;
+    border: 1px solid #F6EEEC;
+    color: #333;
+    line-height: 46px;
+    max-width: 420px;
+    width: 100%;
+    display: block;
+    margin: 14px auto;
+    padding: 0 18px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    height: 46px;
+    border-radius: 40px;
+}
+.login input::placeholder{
+    color: #fff;
+}
+  
+.login input + input {
+    margin-top: 16px;
+}
+  
+  .login u {
+    display: block;
+    margin: 20px auto 0;
+    max-width: 460px;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 20px;
+    border: 1px solid #c33;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #c45453;
+  }
+  
+  .login u + input {
+    margin-top: 16px;
+  }
+  
+  .login input:focus {
+    outline: none;
+    border: 1px solid #0088d7;
+  }
+  
+  .login input::placeholder {
+    color: #2F292B;
+  }
+  
+  .login .buttons {
+    text-align: right;
+    margin: 1em auto;
+    max-width: 420px;
+    box-sizing: border-box;
+    line-height: 56px;
+    position: relative;
+  }
+  
+  .login .buttons span {
+    top: 27px;
+    left: 20px;
+    font-size: 14px;
+    line-height: 23px;
+    margin: 3em;
+  }
+  
+  .login .buttons span + span {
+    top: 48px;
+  }
+  
+  .login .buttons span a {
+    color: #B7957E;
+    text-decoration: none;
+  }
+  
+  .login .buttons b.button {
+    line-height: 42px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    width: 150px;
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: #34BFA3;
+  }
+  .login .buttons b.button:hover{
+      background-color: #2CA189;
+  }
+  .login .buttons i {
+    min-height: 42px;
+    line-height: 42px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    padding-left: 15px;
+    width: 150px;
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: #2CA189;
+    position: relative;
+  }
+  
+  .login .buttons i svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+  }

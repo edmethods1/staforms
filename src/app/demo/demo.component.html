@@ -1,0 +1,38 @@
+
+<div class="form">
+
+  <mat-card-subtitle>
+    {{step.description}}
+  </mat-card-subtitle>
+  <mat-divider></mat-divider>
+  <mat-card-title class="title">
+    {{getTitle()}}
+  </mat-card-title>
+    
+
+  <div>
+    <div *ngFor="let item of step.items;">
+      <app-checkbox [namespace]="step.namespace" [config]="item" *ngIf="item.type == 'CHECKBOX'"></app-checkbox>
+      <app-textfield [namespace]="step.namespace" [config]="item" *ngIf="item.type == 'TEXTFIELD'"></app-textfield>
+      <app-dropdown [namespace]="step.namespace" [config]="item" *ngIf="item.type == 'DROPDOWN'"></app-dropdown>
+      <app-radiobutton [namespace]="step.namespace" [config]="item" *ngIf="item.type == 'RADIOBUTTON'"></app-radiobutton>
+      <app-date [namespace]="step.namespace" [config]="item" *ngIf="item.type == 'DATE'"></app-date>
+      <app-signature [namespace]="step.namespace" [config]="item" *ngIf="item.type == 'SIGNATURE'"></app-signature>
+    </div>
+    
+  </div>
+  <mat-divider></mat-divider>
+  <div class="buttons">
+    <button color="warn" (click)="previous()" class="back-button" mat-raised-button [disabled]="!((currentPath.steps && currentPath.steps[0]) != currentStep.stepId||currentForm!=mainForm)">
+      &lt;
+    </button>
+    <button color="primary" (click)="next()" class="next-button" mat-raised-button
+      [disabled]="!(step.next!=null||currentForm!=mainForm)">
+      &gt;
+    </button>
+    <!--<b class="button" (click)="previous()" *ngIf="(currentPath.steps && currentPath.steps[0]) != currentStep.stepId||currentForm!=mainForm">previous</b>
+    <b class="button" (click)="next()" *ngIf="step.next!=null||currentForm!=mainForm">next</b>-->
+  </div>
+  current formId {{currentForm.formId}}<br/>
+  Path: {{stateString}} {{step.next!=null}}
+</div>
